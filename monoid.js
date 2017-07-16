@@ -69,7 +69,7 @@ const Fn = f =>
 ({
   fold: f,
   concat: o =>
-    Fn(x => f(x).concat(o.fold(x))),
+    Fn(x => f(o.fold(x))),
   inspect: () => `Fn(${f})`
 })
 
